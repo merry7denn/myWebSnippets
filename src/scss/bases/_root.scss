@@ -1,0 +1,16 @@
+@use "../abstract/fonts-maps" as *;
+@use "../abstract/clr-maps" as *;
+:root{
+    @each $font-family,$fonts in $fonts{
+        @if $font-family==primary{
+            @each $font-size, $font in $fonts{
+                --f-primary-#{$font-size}:"#{$font}";
+            }
+        }
+        @else{
+            @each $font-size, $font in $fonts{
+                --f-secondary-#{$font-size}:"#{$font}";
+            }
+        }
+    };
+}

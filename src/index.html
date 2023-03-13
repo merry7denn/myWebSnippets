@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/css/style.css">
+    <title>Web Snippets</title>
+</head>
+
+<body>
+    <header>
+        <nav class="nav-primary">
+            <div class="hamburger-menu">
+                <button class="logo" id="logo" onclick="navToggler()" aria-pressed="false" aria-controls="nav-menu">
+                    <span class="logo__up" id="logoUp"></span>
+                    <span class="logo__middle" id="logoMiddle"></span>
+                    <span class="logo__down" id="logoDown"></span>
+                </button>
+                <ul id="nav-menu" aria-expanded="false">
+                    <li><a href="#" class="nav-item">Acceuil</a></li>
+                    <li><a href="#" class="nav-item">Buttons</a></li>
+                    <li><a href="#" class="nav-item">Navigation</a></li>
+                    <li><a href="#" class="nav-item">Modals</a></li>
+                    <li><a href="#" class="nav-item">Cards</a></li>
+                    <li><a href="#" class="nav-item">Porfolio</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+</body>
+<script>
+    function navToggler() {
+        var x = document.getElementById("nav-menu");
+        var y = document.getElementById("logo");
+        var up = document.getElementById("logoUp");
+        var middle = document.getElementById("logoMiddle");
+        var down = document.getElementById("logoDown");
+        if (x.ariaExpanded === 'true') {
+            x.style.height = '0';
+            x.style.top = '-50%';
+            x.ariaExpanded = "false"
+        }
+        else {
+            x.style.height = '100%';
+            x.style.top = '0';
+            x.ariaExpanded = "true"
+        }
+        if (y.ariaPressed === 'true') {
+            y.ariaPressed = 'false'
+            up.className = 'logoUpClose'
+            down.className = 'logoDownClose'
+            middle.className = 'logoMiddleClose'
+
+        }
+        else {
+            y.ariaPressed = 'true'
+            up.className = 'logoUpToggle'
+            down.className = 'logoDownToggle'
+            middle.className = 'logoMiddleToggle'
+        }
+    }
+</script>
+
+</html>
