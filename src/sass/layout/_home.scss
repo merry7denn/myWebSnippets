@@ -1,0 +1,70 @@
+.about{
+    background-color: var(--clr-primary);
+    &-title{
+        padding-block: 2rem;
+        margin-left: -11rem;
+        opacity: 0;
+        animation: appear 1s .2s both;
+    }
+    &-content{
+        display: grid;
+        gap: 2rem;
+        padding-block:2rem;
+        margin-inline: 3rem 1rem;
+        p{
+
+        }
+        
+    }
+    &-btw{
+        padding-block: 2rem;
+        margin-inline: 3rem;
+    }
+    @media screen and (min-width:500px) {
+        display: grid;
+        grid-template-columns:repeat(12, 1fr);
+        place-items: start;
+        &-title{
+            grid-column:6/span 5;
+            
+        }
+        &-content{
+            grid-column: 6/span 6;
+            grid-row: 2;
+        }
+        &-btw{
+            grid-column: 6/span 7;
+            grid-row: 3;
+
+        }
+        .polygon{
+            background-color: transparent;
+            z-index: 4;
+            &-1{
+                grid-column: 1/span 3;
+            }
+            &-2{
+                grid-column: 4/span 2;
+                grid-row: 2;
+            }
+            &-3{
+                position: absolute;
+                top:25%;
+                left:30%;
+                animation: rotate-poly 30s linear infinite ;
+            }
+        }
+    }
+    
+}
+@keyframes appear {
+    100%{
+        opacity: 1;
+        margin-left: 1rem;
+    }
+}
+@keyframes rotate-poly {
+    100%{
+        rotate: 360deg;
+    }
+}

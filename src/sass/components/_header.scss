@@ -1,0 +1,33 @@
+.mobile-hidden{
+    display: none;
+
+}
+header{
+    background-color: var(--clr-secondary);
+}
+@media screen and (min-width:500px) {
+    .mobile-hidden{
+        display: block;
+    }
+    .header-primary{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        .nav-primary{
+            position: absolute;
+            top:.4rem;
+            right:0;
+            z-index: 2;
+            border-radius: 0 0 0 2rem;
+        }
+        .nav-links{
+            a{
+                margin-inline: 1rem;
+            }
+        }
+        #collapsing-menu{
+            border-radius: 0 0 0 2rem;
+        }
+    }
+    
+}

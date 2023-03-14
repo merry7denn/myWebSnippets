@@ -1,0 +1,25 @@
+.footer{
+    display: grid;
+    background-color: var(--clr-secondary);
+    place-items: center;
+    padding-block: 2rem;
+    p{
+        color: var(--clr-primary);
+    }
+    &-logo{
+        margin-block: 2rem;
+        svg{
+            scale: 1.5;
+            fill:var(--clr-primary)
+        }
+    }
+    @media screen and (min-width:500px) {
+        background-color: var(--clr-primary);
+        p{
+            color: var(--clr-secondary);
+        }
+        svg{
+            fill: var(--clr-accent);
+        }
+    }
+}
