@@ -1,0 +1,29 @@
+h1,h2,h3,h4,h5,h6,.nav-item{
+    font-family: var(--ff-accent);
+    font-weight: 400;
+}
+h1{
+    font-size:5rem;
+    color: var(--clr-primary);
+}
+h2{
+    font-size: 3.5rem;
+    color: var(--clr-accent);
+
+}
+p{
+    font-family: var(--ff-primary);
+    font-size: 1.5rem;
+    color: var(--clr-secondary);
+
+}
+small{
+    font-size:1rem;
+    color: var(--clr-accent);
+
+}
+.nav-item{
+    font-size: 2rem;
+    color: var(--clr-primary);
+
+}
